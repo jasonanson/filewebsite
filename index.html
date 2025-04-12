@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 聊天與雲端儲存網頁</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AI 聊天與雲端儲存網頁</h1>
+    </header>
+    <nav>
+        <a href="#home">首頁</a>
+        <a href="#chat">聊天功能</a>
+        <a href="#cloud">雲端儲存</a>
+        <a href="#contact">聯絡我們</a>
+    </nav>
+    <div class="container">
+        <section id="login" class="interactive">
+            <h2>登入</h2>
+            <input type="text" id="usernameInput" placeholder="輸入帳號..."><br>
+            <input type="password" id="passwordInput" placeholder="輸入密碼...">
+            <button onclick="login()">登入</button>
+        </section>
+        <section id="chat" class="interactive" style="display: none;">
+            <h2>聊天功能</h2>
+            <div id="chatBox">
+                <div id="messages"></div>
+                <input type="text" id="userInput" placeholder="輸入訊息...">
+                <button onclick="sendMessage()">發送</button>
+            </div>
+        </section>
+        <section id="cloud" class="interactive" style="display: none;">
+            <h2>雲端儲存</h2>
+            <label for="fileInput" class="custom-file-input">選擇檔案</label>
+            <input type="file" id="fileInput" style="display: none;">
+            <button onclick="uploadFile()">上傳檔案</button>
+            <div id="fileList"></div>
+        </section>
+        <section id="admin" class="interactive" style="display: none;">
+            <h2>管理功能</h2>
+            <button onclick="clearData()">清除所有資料</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
